@@ -227,6 +227,7 @@ def display_data(df, page_size):
     return
     
 def view_raw_data(df):
+	"""Asks the user if they would like to review the raw data and pages through."""
 	view_raw_data = input('\nWould you like to view the first rows of the raw data? Enter yes or no.\n')
 	if view_raw_data.lower() == 'yes':
 		valid = False
