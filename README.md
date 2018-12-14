@@ -8,8 +8,12 @@ pdsnd_github
 Forked github project with Python Bikeshare project code in it.
 
 ### Files used
-Include the files used
+bikeshare.py
+readme.txt
+chicago.csv (not source controlled)
+new_york_city.csv (not source controlled)
+washington.csv (not source controlled)
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Forked from https://github.com/udacity/pdsnd_github
 
