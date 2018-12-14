@@ -2,10 +2,10 @@
 12/14/2018
 
 ### Project Title
-Replace the Project Title
+pdsnd_github
 
 ### Description
-Describe what your project is about and what it does
+Forked github project with Python Bikeshare project code in it.
 
 ### Files used
 Include the files used
