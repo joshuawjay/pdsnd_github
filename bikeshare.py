@@ -226,6 +226,24 @@ def display_data(df, page_size):
     
     return
     
+def view_raw_data(df):
+	view_raw_data = input('\nWould you like to view the first rows of the raw data? Enter yes or no.\n')
+	if view_raw_data.lower() == 'yes':
+		valid = False
+		while valid == False:
+			page_size = input('\nHow many records would you like to see? Enter 1 through 10.\n')
+			
+			try:
+				page_size = int(page_size)
+				if 1 <= page_size <= 10:
+					valid = True
+			except:
+				print('\n{} is not a valid integer between 1 and 10. Please try again.\n'.format(page_size))
+		
+		display_data(df, page_size)
+	
+	return page_size
+	
 def main():
     while True:
         city, month, day = get_filters()
@@ -235,21 +253,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-
-        view_raw_data = input('\nWould you like to view the first rows of the raw data? Enter yes or no.\n')
-        if view_raw_data.lower() == 'yes':
-            valid = False
-            while valid == False:
-                page_size = input('\nHow many records would you like to see? Enter 1 through 10.\n')
-                
-                try:
-                    page_size = int(page_size)
-                    if 1 <= page_size <= 10:
-                        valid = True
-                except:
-                    print('\n{} is not a valid integer between 1 and 10. Please try again.\n'.format(page_size))
-            
-            display_data(df, page_size)
+		view_raw_data(df)
         
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
